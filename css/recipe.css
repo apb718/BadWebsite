@@ -1,0 +1,42 @@
+@import url('https://fonts.cdnfonts.com/css/bleeding-cowboys');
+
+*{
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+ul,li {
+	max-width: 40%;
+}
+
+h1 {
+	background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);-webkit-background-clip: text;
+	color: transparent;
+	width: fit-content;
+	font-family: 'Bleeding Cowboys', sans-serif !important;
+}
+html {
+	background-image: radial-gradient(blue, yellow, brown);
+}
+h2 {
+	color: salmon;
+	text-shadow: -3px -3px 0 #ffffff, 3px -7px 0 #123456, -12px 12px 0 #147fff, 3px 12px 0 #453980;
+}
+nav li {
+  list-style-type: none;
+  padding: 8px;
+  display: inline;
+  background-color: brown;
+}
+nav {
+	padding: 9px;
+	background-color: grey;
+}
+nav a:hover{
+	text-shadow: -3px -3px 0 #ff42ff, 3px -7px 0 #fe3456, -14px 20px 0 #e47fff, 3px 12px 0 #453980;
+	background: radial-gradient(circle at center, #ff0000 0%, #00ff00 25%, #0000ff 50%, #ffff00 75%, #ff00ff 100%, #f0f0f0 150%, #1a1a1a 200%);
+;
+	padding: 13%;
+}
+a:visited {
+    text-decoration: none !important;
+    decoration: none;
+}
