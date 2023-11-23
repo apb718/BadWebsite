@@ -1,0 +1,74 @@
+body {
+    background-color: limegreen;
+}
+h1 {
+    background-color: black;
+    color: white;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 4px;
+}
+
+nav a {
+    background-color: tan;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 1vw;
+}
+div {
+    margin-left: 1vw;
+    /* padding: 6px; */
+}
+nav a:hover {
+    color: white;
+    padding: 12px;
+}
+#tempPara {
+    display: inline;
+}
+
+nav {
+    margin-bottom: 3.5vh;
+}
+
+#convertedBox {
+
+    background-image: radial-gradient(orange, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:black;
+    -webkit-text-stroke-width:1px;
+}
+
+.nav-bar {
+    background-color: hotpink;
+    color: darkgreen;
+    padding: 10px;
+    font-family: Comic Sans MS;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 3px dashed purple;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .nav-link:hover {
+    color: lime;
+    background-color: orange;
+    text-decoration: line-through;
+    border: 1px dotted yellow;
+    /* transform: rotate(52deg); */
+  }
+  

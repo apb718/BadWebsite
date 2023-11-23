@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Temperature Converter</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Fahrenheit to Celsius Converter</h1>
+
+        <nav class="nav-bar">
+            <a class = "nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="">About Me</a>
+            <a class = "nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="">Recipe</a>
+            <a class = "nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="index.html">Temp Conversions</a>
+            <a class = "nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="oddeven.html">Odd or Even</a>
+        </nav>
+        <div>
+            <p id="tempPara">Enter a temperature in Fahrenheit</p>
+            <input type="text" id="fahrenheit">
+            <br>
+            <input type="button" value="Convert to Celsius" onclick="convertTemp()">
+
+            <p id="convertedBox"></p>
+        </div>
+        <script>
+            
+	var hoveringBool = 0;
+            async function spinLinks() {
+                
+                if(hoveringBool == 0) {
+                    hoveringBool = 1;
+                } else {
+                    hoveringBool = 0;
+                }
+                var counter = 0;
+                while(hoveringBool == 1){
+                    await sleep(10);
+                    var navLinks = document.getElementsByTagName("a");
+                    for(var i = 0; i < navLinks.length; i++){
+                        console.log(`Spinnning ${counter} degrees`);
+                        navLinks[i].style.transform = "rotate("+counter+"deg)";
+                    }
+                    counter += 1;
+                }
+            }
+
+	function convertTemp(){
+                
+                var valueToConvert = document.getElementById("fahrenheit").value;
+
+                var convertedValue = (valueToConvert - 32) * 5/9;
+
+                var result = document.getElementById("convertedBox");
+                result.innerHTML =`Your value converted to celsius is ${convertedValue.toFixed(1)}&#8451;`;
+
+            }
+	function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+        </script>
+    </body>
+</html>

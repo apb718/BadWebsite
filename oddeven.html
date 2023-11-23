@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Even or Odd</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+	<style>
+        body {
+            background-image: url("chat.jpeg");
+        }
+   	 </style>
+    </head>
+    <body>
+        <h1>Even or Odd</h1>
+
+
+        
+        <nav class="nav-bar">
+            <a class="nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="https://ceclnx01.cec.miamioh.edu/~byrdap/spring23-cse102/recipe/index.html">About Me</a>
+            <a class="nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="https://ceclnx01.cec.miamioh.edu/~byrdap/spring23-cse102/recipe/recipe.html">Recipe</a>
+            <a class="nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="index.html">Temp Conversions</a>
+            <a class="nav-link" onmouseover="spinLinks()" onmouseout="spinLinks()" href="oddeven.html">Odd or Even</a>
+        </nav>
+
+        <div>
+            <p id="tempPara">Enter an integer to check whether it is even or odd</p>
+            <input type="text" id="numberInput">
+            <br>
+            <input type="button" value="Check My Number" onclick="checkEvenOdd()">
+
+            <p id="results" style="color: white;"></p>
+        </div>
+
+        <script>
+
+
+            var hoveringBool = 0;
+            async function spinLinks() {
+                
+                if(hoveringBool == 0) {
+                    hoveringBool = 1;
+                } else {
+                    hoveringBool = 0;
+                }
+                var counter = 0;
+                while(hoveringBool == 1){
+                    await sleep(10);
+                    var navLinks = document.getElementsByTagName("a");
+                    for(var i = 0; i < navLinks.length; i++){
+                        console.log(`Spinnning ${counter} degrees`);
+                        navLinks[i].style.transform = "rotate("+counter+"deg)";
+                    }
+                    counter += 1;
+                }
+            }
+            
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            function checkEvenOdd() {
+                
+                var valueToCheck = document.getElementById("numberInput").value;
+                var result = document.getElementById("results");
+                if(valueToCheck % 2 == 0){
+                    result.innerHTML =`Your value is even`;
+                } else if(valueToCheck % 2 == 1) {
+                    result.innerHTML =`Your value is odd`;  
+                } else {
+                    result.innerHTML =`You did not input a valid number`;  
+                }
+
+            }
+            
+            
+            
+
+        </script>
+    </body>
+</html>
